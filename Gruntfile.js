@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         copy: {
             build: {
                 files: [
-
+                    {expand: true, flatten: true, src: ['src/img/**.png'], dest: 'dist/img/'}
                 ]
             }
         },
@@ -86,5 +86,5 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', ['clean:dev', 'karma:dev']);
     grunt.registerTask('doc', ['clean:doc', 'jsdoc:dev']);
-    grunt.registerTask('default', ['clean:build', 'requirejs:build', 'processhtml:build', 'less:build']);
+    grunt.registerTask('default', ['clean:build', 'requirejs:build', 'processhtml:build', 'less:build', 'copy']);
 };
