@@ -1,4 +1,4 @@
-define(['app/ticTacToe'], function (TicTacToe) {
+define(['app/ticTacToe', 'app/utils'], function (TicTacToe, utils) {
     'use strict';
 
     var gameModel = new TicTacToe('o', 'Ivan', "Petkan");
@@ -11,14 +11,12 @@ define(['app/ticTacToe'], function (TicTacToe) {
         ev.stopPropagation();
         ev.preventDefault();
 
-        console.log(hasClass(ev.target, 'col'));
+        if(utils.hasClass(ev.target, 'col')) {
+            console.log(ev.target.dataset.pos);
+        }
+
     }
 
-    function hasClass(el, className) {
-        var elClasses = el.className.split(' ');
-
-        return elClasses.indexOf(className) >= 0;
-    }
 
     console.log(gameModel);
 });

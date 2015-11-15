@@ -9,10 +9,13 @@ div {
 }
 #play-board {
   margin: 30px;
+  display: inline-block;
+  padding: 4px 4px 0 4px;
+  background-color: gray;
 }
 .row .col {
   display: inline-block;
   width: 100px;
   height: 100px;
-  border: 1px solid gray;
+  background-color: white;
 }
