@@ -1,7 +1,8 @@
 body {
-  color: white;
+  background-color: white;
   padding: 0;
   margin: 0;
+  color: black;
 }
 div {
   padding: 0;
@@ -26,4 +27,7 @@ div {
 .row .col.o {
   background: url('img/pic_o.png') center;
   background-size: 100%;
+}
+.hidden {
+  display: none!important;
 }

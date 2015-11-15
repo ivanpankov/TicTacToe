@@ -1,12 +1,26 @@
 define([], function () {
     'use strict';
 
+    /**
+     * Represents common utils .
+     *
+     * @exports Tic Tac Toe
+     */
+
     var constants = {
         PLAYER_IS_NOT_VALID: 'Player is not valid!',
         POSITION_IS_NOT_CORRECT: 'Position is not correct. It must be a number between 1 and 9!'
     };
 
-
+    /**
+     * Game model
+     *
+     * @param firstPlays {string} - the player who plays first
+     * @param nameX {string} - the name of player who will play with "X"
+     * @param nameO {string} - the name of player who will play with "O"
+     * @param onWin {function} - callback will called when have have winner
+     * @constructor
+     */
     function TicTacToe(firstPlays, nameX, nameO, onWin) {
         var first = firstPlays || 'x';
 

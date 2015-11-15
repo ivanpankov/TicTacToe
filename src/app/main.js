@@ -1,12 +1,21 @@
 define(['app/ticTacToe', 'app/utils'], function (TicTacToe, utils) {
     'use strict';
 
-    var gameModel = new TicTacToe('o', 'Player1', "Player2", onWin);
+    var gameModel, gameBoard, showWinner;
 
-    var gameBoard = document.getElementById('play-board');
-    var showWinner = document.getElementById('show-winner');
+    init();
 
-    gameBoard.addEventListener('click', onBoardClick);
+
+    function init() {
+        gameModel = new TicTacToe('o', 'Player1', "Player2", onWin);
+        gameBoard = document.getElementById('play-board');
+        showWinner = document.getElementById('show-winner');
+
+        utils.removeClass(gameBoard, 'hidden');
+        utils.setClass(showWinner, 'hidden');
+
+        gameBoard.addEventListener('click', onBoardClick);
+    }
 
     function onBoardClick(ev) {
         ev.stopPropagation();
@@ -17,7 +26,6 @@ define(['app/ticTacToe', 'app/utils'], function (TicTacToe, utils) {
                 !utils.hasClass(target, 'x') && !utils.hasClass(target, 'o');
 
         if(isMove) {
-            console.log(target);
             utils.setClass(target, gameModel.players.current);
             gameModel.move(+target.dataset.pos[1]);
         }
@@ -25,9 +33,17 @@ define(['app/ticTacToe', 'app/utils'], function (TicTacToe, utils) {
     }
 
     function onWin(win) {
-        console.log('The winner is ' + gameModel.players[win.player].name);
+        gameBoard.removeEventListener('click', onBoardClick);
+        showWinner.innerHTML = 'The winner is ' + gameModel.players[win.player].name;
+        utils.setClass(gameBoard, 'hidden');
+        utils.removeClass(showWinner, 'hidden');
+    }
+
+    function noWinner() {
+        //TODO: to make case when no winner.
     }
 
 
-    console.log(gameModel);
+    //TODO: fix documents
+    //TODO: add screen for user names
 });

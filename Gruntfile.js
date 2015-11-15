@@ -86,5 +86,5 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', ['clean:dev', 'karma:dev']);
     grunt.registerTask('doc', ['clean:doc', 'jsdoc:dev']);
-    grunt.registerTask('default', ['clean:build', 'requirejs:build', 'processhtml:build', 'less:build', 'copy']);
+    grunt.registerTask('default', ['clean:build', 'requirejs:build', 'processhtml:build', 'less:build', 'copy', 'jsdoc:dev']);
 };
