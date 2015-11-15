@@ -1,0 +1,35 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test",
+    "build": "grunt default",
+    "clean": "grunt clean"
+  },
+  "author": "Ivan Pankov",
+  "license": "ISC",
+  "devDependencies": {
+    "almond": "^0.3.1",
+    "clean-css": "^3.4.6",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.1",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-jsdoc": "^1.0.0",
+    "grunt-karma": "^0.12.1",
+    "grunt-processhtml": "^0.3.8",
+    "jasmine-core": "^2.3.4",
+    "jsdoc": "^3.3.3",
+    "karma": "^0.13.10",
+    "karma-coverage": "^0.5.2",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-requirejs": "^0.2.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "requirejs": "^2.1.20"
+  }
+}
