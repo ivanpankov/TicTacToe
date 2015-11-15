@@ -19,3 +19,11 @@ div {
   height: 100px;
   background-color: white;
 }
+.row .col.x {
+  background: url('img/pic_x.png') center;
+  background-size: 100%;
+}
+.row .col.o {
+  background: url('img/pic_o.png') center;
+  background-size: 100%;
+}
